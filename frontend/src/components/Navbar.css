@@ -1,0 +1,125 @@
+.navbar {
+    height: 60px;
+    width: 100%;
+    background-color: #D9D9D9;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0.5rem;
+    z-index: 50;
+}
+
+.navbar__logo{
+    display: flex;
+    flex-direction: row;
+}
+.navbar__logo > div  {
+    padding: 0.3rem;
+    display: flex;
+    align-items: center;
+    max-width: 100px;
+}
+.navbar__logo h2 {
+    display: flex;
+    position:absolute 50%;
+    align-items: center;
+    color: #687273;
+    font-size: 1.4rem;
+    cursor: pointer;
+    max-width: 100px;
+}
+
+.navbar__links {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    padding: 1rem;
+}
+
+.navbar__links > li {
+    padding-left: 1.5rem;
+}
+
+.navbar__links > li > a {
+    text-decoration: none;
+    color:#708C08;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+}
+
+.navbar__links > li > a > span {
+    display: flex;
+    align-items: center;
+    margin-left: 8px;
+}
+
+.cart__link {
+    background:#68727325;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.cart__link:hover {
+    background: #708C08;
+    color: #D9D9D9;
+}
+
+.cartlogo__badge {
+    width: 30px;
+    height: 30px;
+    background: #90ac2d;
+    border-radius: 50%;
+    margin-left: 8px;
+    color: #D9D9D9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    vertical-align: center;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.hamburger__menu {
+    
+    width: 30px;
+    height: 30px;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.hamburger__menu > div {
+    width: 100%;
+    height: 3px;
+    background: #68727354;
+}
+
+
+.hamburger__menu:hover > div {
+    background: #708C08;
+}
+
+@media (max-width: 960px) {
+    .navbar__links {
+        display: none;
+    }
+
+    .hamburger__menu {
+        display: flex; 
+    }
+    .navbar__logo h2 {
+    text-align: center;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    color: #687273;
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+}
+
+
