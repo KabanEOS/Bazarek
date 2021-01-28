@@ -4,9 +4,11 @@ import { useState } from "react";
 
 const Product = () => {
   const [hovered, setHovered] = useState(false);
-  const addToOrder = () => {
-    console.log("noi chuj no i jest");
+  const addToOrderHover = () => {
     setHovered(true);
+  };
+  const setDefault = () => {
+    setHovered(false);
   };
 
   return (
@@ -36,11 +38,8 @@ const Product = () => {
 
       <div
         className="info__button"
-        onMouseOver={addToOrder}
-        onMouseLeave={() => {
-          console.log("noi chuj no i jest");
-          setHovered(false);
-        }}
+        onMouseOver={addToOrderHover}
+        onMouseLeave={setDefault}
       >
         <p className="info__price">{hovered ? "+" : "$499.99"}</p>
       </div>

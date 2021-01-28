@@ -22,6 +22,11 @@ const HomeScreen = () => {
         <FakeProduct/>
         <FakeProduct/>
         <FakeProduct/>
+        <FakeProduct/>
+        <FakeProduct/>
+        <FakeProduct/>
+        <FakeProduct/>
+        <FakeProduct/>
       </div>
     </div>
   );

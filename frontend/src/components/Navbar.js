@@ -19,7 +19,7 @@ const Navbar = ({click}) => {
                     <Link to="/cart" className="cart__link">
                         <i className="fas fa-shopping-cart"></i>
                         Cart
-                        <span className="cartlogo__badge">0</span>
+                        <span className="cartLogo__badge">0</span>
                      </Link>
                 </li>                
                 <li>
