@@ -1,20 +1,14 @@
 import { Link } from "react-router-dom";
-import {  Text, TextInput, View  } from "react";
+import { Text, TextInput, View } from "react";
 import React, { useState } from "react";
 import "./CartItem.css";
+import {QtyCounter} from './QtyCounter'
 
 const CartItem = () => {
-
-
-  let qty = 1;
-
-  const incAmount = () => {
-    qty += 1;
-  };
-
-  const decAmount = () => {
-    qty -= 1;
-  };
+  
+    const callback = (qty) => {
+        console.log('i am Cartitem, i received qty=', qty)
+    }
 
   return (
     <div className="cartItem">
@@ -34,29 +28,9 @@ const CartItem = () => {
       </Link>
       <p className="cartItem__price">$499.99</p>
 
-      <p className="cartItem__qty__Block">
-        <div className="cartItem__qty">
-          <form>
-            <label>
-              Qty
-                <input> 
-                </input>
-              
-              {/* TODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODO */}
-            </label>
-          </form>
-        </div>
-      </p>
-      <p className="incDec__bts__Block">
-        <div className="incDec__bts">
-          <button className="qtyInc" onClick={incAmount}>
-            <i className="fas fa-plus"></i>
-          </button>
-          <button className="qtyDec" onClick={decAmount}>
-            <i className="fas fa-minus"></i>
-          </button>
-        </div>
-      </p>
+
+      <QtyCounter onChangeValue={callback}></QtyCounter>
+
       <p className="cartItem__deleteBtn__Block">
         <button className="cartItem__deleteBtn">
           <i className="fas fa-trash"></i>
