@@ -21,14 +21,14 @@ export const QtyCounter = (props) => {
         <div className="cartItem__qty">
           <form>
             <label >
-              Qty
+              x Qty 
               <input
                 onChange={(event) => {
                     setQtyValue(parseInt(event.target.value));
                     onChangeValue(parseInt(event.target.value));
                 }}
                 value={qtyValue}
-                type="number"
+                // type="number"
                 placeholder={1}
               />
             </label>

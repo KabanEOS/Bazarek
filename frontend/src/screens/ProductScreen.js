@@ -1,5 +1,6 @@
 import "./ProductScreen.css";
 import { FakeDiv } from "../components/FakeDiv";
+import { globalState } from "../globalState"
 
 const ProductScreen = () => {
   return (
@@ -42,7 +43,7 @@ const ProductScreen = () => {
               </select>
             </p>
             <p>
-              <button type="button">Add to order</button>
+              <button>Add to order</button>
             </p>
           </div>
         </div>

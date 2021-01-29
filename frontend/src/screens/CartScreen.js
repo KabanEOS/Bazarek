@@ -1,6 +1,9 @@
 import "./CartScreen.css";
 import CartItem from "../components/CartItem";
 const CartScreen = () => {
+
+
+
   return (
     <div className="cartScreen">
       <div className="cartScreen__left">

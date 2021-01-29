@@ -2,13 +2,23 @@ import { Link } from "react-router-dom";
 import { Text, TextInput, View } from "react";
 import React, { useState } from "react";
 import "./CartItem.css";
-import {QtyCounter} from './QtyCounter'
+import { QtyCounter } from "./QtyCounter";
+import { globalState } from "../globalState"
+
 
 const CartItem = () => {
+  let qtyVal = 0;
+  const price = 399.99;
+//   globalState.basket[0].price=price;
   
-    const callback = (qty) => {
-        console.log('i am Cartitem, i received qty=', qty)
-    }
+  const callback = (qty) => {
+      qtyVal = qty;
+      sumPriceSetter(price * qtyVal);
+      console.log(globalState);
+    //   globalState.basket[0].qty=qty;
+  };
+
+  const[sumPrice, sumPriceSetter] = useState(price);
 
   return (
     <div className="cartItem">
@@ -26,8 +36,7 @@ const CartItem = () => {
       >
         <p>Product 1 nazwa nazwa nazwa nazwa nazwa nazwa nazwa nazwa </p>
       </Link>
-      <p className="cartItem__price">$499.99</p>
-
+      <p className="cartItem__price">{price}</p>
 
       <QtyCounter onChangeValue={callback}></QtyCounter>
 
@@ -36,6 +45,13 @@ const CartItem = () => {
           <i className="fas fa-trash"></i>
         </button>
       </p>
+
+      <p className="cartItem__sum__Block">
+        <div className="cartItem__sum">
+            {sumPrice}
+        </div>
+      </p>
+
     </div>
   );
 };

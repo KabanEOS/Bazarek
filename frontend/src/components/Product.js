@@ -1,6 +1,7 @@
 import "./Product.css";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+// import { globalState } from "../globalState";
 
 const Product = () => {
   const [hovered, setHovered] = useState(false);
@@ -9,6 +10,21 @@ const Product = () => {
   };
   const setDefault = () => {
     setHovered(false);
+  };
+
+  // const addToOrder = () => {
+    // globalState.basket[0].qty=qty+1;
+  // }
+
+  let qtyVal = 0;
+  const price = 399.99;
+  // globalState.basket[0].price=price;
+  
+  const callback = (qty) => {
+      qtyVal = qty;
+      // sumPriceSetter(price * qtyVal);
+      // console.log(globalState);
+      // globalState.basket[0].qty=qty;
   };
 
   return (
@@ -37,6 +53,7 @@ const Product = () => {
       </Link>
 
       <div
+        // onClick={addToOrder}s
         className="info__button"
         onMouseOver={addToOrderHover}
         onMouseLeave={setDefault}

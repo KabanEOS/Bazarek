@@ -1,9 +1,12 @@
 import "./HomeScreen.css";
 import Product from "../components/Product";
 import { FakeProduct } from "../components/FakeProduct";
+import { globalState } from "../globalState"
 
 const HomeScreen = () => {
-
+  
+  console.log(globalState);
+  
 
   return (
     <div className="homescreen">
